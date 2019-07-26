@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tugas PwPb</string>
+    <string name="rumus_tabung">Rumus Tabung</string>
+
+    <string-array name="rumus_array">
+        <item>Keliling alas</item>
+        <item>Luas</item>
+    </string-array>
+</resources>
