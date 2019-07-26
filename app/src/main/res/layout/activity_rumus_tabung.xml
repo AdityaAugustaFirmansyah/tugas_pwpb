@@ -19,10 +19,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edt_jari-jari"
+        android:inputType="number"
         android:hint="jari jari"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:text="hasil keliling alas"
         android:id="@+id/btn_result"/>
 
@@ -30,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="hasil luas"
+        android:inputType="number"
         android:id="@+id/btn_result1"/>
 
 

@@ -28,20 +28,27 @@ public class RumusTabungActivity extends AppCompatActivity implements View.OnCli
         buttonResult1.setOnClickListener(this);
     }
 
-
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btn_result){
-            hasilAlas = 2*3.14*Double.parseDouble(edtJari.getText().toString());
-            luas = 2*3.14*Double.parseDouble(edtJari.getText().toString());
-            Intent intent = new Intent(RumusTabungActivity.this,Result.class);
-            intent.putExtra("result",hasilAlas);
-            startActivity(intent);
-        }else if (v.getId() == R.id.btn_result1){
-            luas = 2*3.14*Double.parseDouble(edtJari.getText().toString())*Double.parseDouble(edtJari.getText().toString());
-            Intent intent1 = new Intent(RumusTabungActivity.this,Result.class);
-            intent1.putExtra("result",luas);
-            startActivity(intent1);
+            if (v.getId() == R.id.btn_result){
+                if (edtJari.getText().toString().equals("")){
+                    hasilAlas = 0;
+                }else{
+                    hasilAlas = 2*3.14*Double.parseDouble(edtJari.getText().toString());
+                }
+                Intent intent = new Intent(RumusTabungActivity.this,Result.class);
+                intent.putExtra("result",hasilAlas);
+                startActivity(intent);
+            }else if (v.getId() == R.id.btn_result1){
+                if (edtJari.getText().toString().equals("")){
+                    luas = 0;
+                }else {
+                    luas = 2*3.14*Double.parseDouble(edtJari.getText().toString())*Double.parseDouble(edtJari.getText().toString());
+                }
+                Intent intent1 = new Intent(RumusTabungActivity.this,Result.class);
+                intent1.putExtra("result",luas);
+                startActivity(intent1);
+            }
         }
+
     }
-}
